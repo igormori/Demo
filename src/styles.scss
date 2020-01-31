@@ -1,0 +1,305 @@
+$base-theme:Default;
+$skin-name:LifeLabs;
+$swatch-name:Material;
+$info: #3e80ed;
+$accent: #3e80ed;
+$success: #5ec232;
+$warning: #fdce3e;
+$error: #d51923;
+$text-color: #ffffff;
+$bg-color: #ffffff;
+$base-text: #ffffff;
+$base-bg: #f6f6f6;
+$hovered-text: #11479d;
+$hovered-bg: #ffd246;
+$selected-text: #ffffff;
+$selected-bg: #ffffff;
+$series-a: #ffffff;
+$series-b: #ffd246;
+$series-c: #78d237;
+$series-d: #28b4c8;
+$series-e: #656565;
+$series-f: #ffffff;
+
+
+$primary:#12469d;
+$button-focus-bg: #102548;
+$button-bg:#12469d;
+$button-text: #ffffff;
+$button-hover-bg: #0b2d65;
+$button-focus-border:#ffffff;
+$button-outline-focus:#e3e9f3;
+$button-disable-border:#6a6969;
+$button-disable-bg:#ececec;
+$button-bare-hover:#e3e9f3;
+
+
+
+// @import '~@progress/kendo-theme-material/scss/all';
+@import '~@progress/kendo-theme-material/dist/all.scss';
+
+
+
+/* <-----    button    ------->*/
+.k-button {
+    text-transform: capitalize;
+    line-height: 1.14;
+    letter-spacing: 1.25px;
+    border: 1px solid transparent;
+    
+    &:focus{
+        background-color: $button-focus-bg;
+        border: 1px solid $button-focus-border;
+        box-shadow: 0 0 0 0.1rem $primary;
+    }
+    &::before {
+        display: none;
+    }
+    &:hover{
+        background-color: $button-hover-bg;
+        border-color: $button-hover-bg;
+    }
+    &.k-state-focused {
+        outline:none;
+    }
+    &.k-outline {
+        border: solid 1px $primary;
+        color: $primary;
+        &::before {
+            display: none;
+        }
+        &:focus{
+            background-color:  $button-outline-focus;
+            border: 1px solid $button-focus-border;
+            box-shadow: 0 0 0 0.1rem $primary;
+
+        }
+        &:hover {
+            background-color:  $button-outline-focus;
+            border: solid 1px $primary;
+        }
+        &.k-state-disabled{
+            border: solid 1px $button-disable-border;
+            background-color: $button-disable-bg;
+            color: $button-disable-border;
+        }
+    }
+    &.k-flat{
+        color: $primary;
+        border:none;
+        &:focus{
+            background-color:  $button-focus-border !important;
+            box-shadow: 0 0 0 0.1rem $primary !important;
+        }
+        &:hover {
+            background-color:  $button-bare-hover !important;
+            color: $primary;
+        }
+        &.k-state-disabled{
+            background-color: $button-disable-bg;
+            color: $button-disable-border;
+        }
+    }
+    
+};
+
+/* <-----    Icons    ------->*/
+.k-icon{
+    font-size: 15px;
+}
+
+/* <-----    date picker    ------->*/
+.k-animation-container {
+    & .k-calendar {
+        & .k-header {
+            color:#11479d;
+        }
+        & .k-footer {
+            & .k-nav-today {
+                color:#11479d;
+                display:none
+            }
+        }
+        & .k-content th {
+            color: lightslategrey;
+        }
+
+    }
+}
+
+.k-widget {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+.k-widget::after, .k-state-focused::after{
+    display:none;
+}
+
+
+/* <-----    textbox   ------->*/
+
+.k-textbox {
+    border: 1px solid $primary;
+    border-radius: 4px;
+    padding-left: 8px;
+    &:hover{
+        border-color:$primary ;
+    }
+    &:focus{
+        border-color:$primary ;
+        box-shadow: 0 0 0 0.1rem $primary; 
+    }
+}
+
+/* <-----    textbox   ------->*/
+
+.k-radio {
+    border: 2px solid $primary;
+    margin: 11px;
+    &:hover{
+        border-color:$primary ;
+        box-shadow: 0 0 0 0.3rem #e3e9f3;
+    }
+    &:focus{
+        border-color:$primary ;
+        box-shadow: 0 0 0 0.3rem #e3e9f3 !important;
+        outline: 1px solid $primary;
+        outline-offset: 4px;
+    }
+}
+
+.k-checkbox {
+    border: 2px solid $primary;
+    cursor: pointer;
+    margin-top: 11px;
+    &:hover{
+        border-color:$primary ;
+        box-shadow: 0 0 0 0.3rem #e3e9f3;
+    }
+    &:focus{
+        border-color:$primary ;
+        box-shadow: 0 0 0 0.3rem #e3e9f3 !important;
+        outline: 1px solid $primary;
+        outline-offset: 4px;
+    }
+}
+
+.k-widget {
+    border:none;
+    &.k-state-disabled {
+         & .k-switch-handle{
+            background-color: #acacac !important;
+        }
+         & .k-switch-container{
+             background-color: #acacac !important;
+         }
+    }
+
+    & .k-switch-container{
+        &:focus {
+            outline: 1px solid $primary;
+            outline-offset: 4px;
+        }
+        &:hover {
+            outline: 1px solid transparent;
+        }
+    }
+
+    & .k-switch-handle {
+        color: white;
+        top:-33.5%;
+            &:hover {
+            box-shadow: 0 0 0 0.8rem rgba(158,183,225,31%);
+        }
+        &:focus {
+            outline: 1px solid $primary;
+            outline-offset: 4px;
+        }
+        &:hover {
+            outline: 1px solid transparent;
+        }
+    }
+
+    &.k-switch-on {
+        & .k-switch-container {
+            background-color: $primary;
+        }
+        & .k-switch-handle {
+            color: white;
+            background-color: white;
+            &:hover {
+                box-shadow: 0 0 0 0.8rem rgba(158,183,225,31%);
+            }
+        }
+    }
+}
+
+.k-widget:focus,
+.k-switch-container:focus {
+    outline:none;
+}
+
+
+
+// .k-textbox-container::after, .k-state-focused::after{
+//     display:none;
+// }
+  
+// .k-textbox {
+//     height: 50px;
+//     border: 1px solid lightgray;
+//     border-radius: 4px;
+// }
+// .k-textbox:focus {
+//     border: 1px solid lightgray;
+// }
+// .k-textbox:hover {
+//     border: 1px solid lightgray;
+// }
+
+// .k-textbox-container.k-state-focused>.k-label {
+//     color:#afafaf
+// }
+
+// .k-textbox, .k-input {
+
+// }
+
+// .k-label {
+//     padding-left: 3px;
+//     padding-right: 3px;
+// }
+
+// .k-icon-search {
+//     position: absolute;
+//     font-size: 25px;
+//     color: white;
+//     right:8px;
+//     top: 15px;
+// }
+
+// .k-icon-container{
+//     background-color: #11479d;
+//     position: absolute;
+//     right:0px;
+//     width: 45px;
+//     height: 50px;
+//     margin: 0px;
+//     border-radius: 0px 4px 4px 0px;
+// }
+
+
+.k-calendar {
+    & .k-header {
+        color:#11479d;
+    }
+    & .k-footer {
+        & .k-nav-today {
+            color:#11479d;
+            display:none
+        }
+    }
+    & .k-content th {
+        color: lightslategrey;
+    }
+}

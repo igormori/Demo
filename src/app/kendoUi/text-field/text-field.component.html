@@ -1,0 +1,191 @@
+
+<div class="row buttons-row" kendoRippleContainer >
+    <div class="col-12 mt-2">
+        <h4>Text Fields</h4>
+    </div>
+    <div class="col-12">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="row">
+              <div class="col-12  p-3">
+                <div class="row">
+                  <div class="col-12 col-sm masterControl-btns">
+                      <label class="fields-label" for="default">Default input</label>
+                      <input
+                        kendoTextBox
+                        id="default"
+                        (click)="onCodeClick(0)"
+                      >
+                </div>
+                <div class="col-12 col-sm masterControl-btns validation-error">
+                      <label class="error-label" for="error">Error input</label>
+                        <input
+                          kendoTextBox
+                          id="error"
+                          class="validation-error"
+                          (click)="onCodeClick(1)"
+                        >
+                        <div class="error-message">Error Message</div>
+                </div>
+                <div class="col-12 col-sm masterControl-btns">
+                    <label class="fields-label" for="icon">Icon input</label>
+                    <span class="k-textbox k-space-right fields-icon" >
+                        <input
+                          kendoTextBox
+                          class="input-icon"
+                          id="icon"
+                          (click)="onCodeClick(2)"
+                        >
+                        <span href="" class="k-icon k-i-search">&nbsp;</span>
+                    </span>
+                </div>
+                <div class="col-12 col-sm masterControl-btns">
+                    <label class="fields-label" for="Password">Password input</label>
+                        <input
+                          kendoTextBox
+                          id="Password"
+                          type="password"
+                          (click)="onCodeClick(3)"
+                        >
+                </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div *ngIf="showCode[0]" class="col-12 masterControl-source ">
+                <h5 class="mt-2">Html</h5>
+<pre><code>
+  &lt;label class="fields-label" for="default"&gt;
+    Default input
+  &lt;/label&gt;
+  &lt;input
+    kendoTextBox
+    id="default"
+  &gt;
+</code></pre> 
+<h5>CSS</h5>
+<pre><code>
+    .fields-label &#123;
+      color:#12469d;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 2px;
+    &#125;
+</code></pre>
+            </div>
+            <div *ngIf="showCode[1]" class="col-12 masterControl-source ">
+                <h5 class="mt-2">Html</h5>
+<pre><code>
+  &lt;label class="error-label" for="error" &gt;
+    Error input
+  &lt;/label &gt;
+  &lt;input
+    kendoTextBox
+    id="error"
+    class="validation-error"
+  &gt;
+  &lt;div class="error-message"&gt;Error Message&lt;/div&gt;
+</code></pre> 
+<h5>CSS</h5>
+<pre><code>
+  .validation-error &#123;
+      .k-textbox &#123;
+          border: 1px solid $validation-color;
+          padding-left: 5px;
+          &:hover &#123;
+              border-color:$validation-color ;
+          &#125;
+          &:focus &#123;
+              border-color:$validation-color;
+              box-shadow: 0 0 0 0.1rem $validation-color;
+          &#125;
+      &#125;
+  &#125;
+
+  .error-label &#123;
+    color:$validation-color ;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 2px;
+  &#125;
+  
+  .error-message &#123;
+      color:$validation-color ;
+      font-size: 12px;
+      padding-left: 5px;
+  &#125;
+</code></pre>
+            </div>
+            <div *ngIf="showCode[2]" class="col-12 masterControl-source ">
+                <h5 class="mt-2">Html</h5>
+    <pre><code>
+  &lt;label class="fields-label" for="icon">Icon input&lt;/label&gt;
+  &lt;span class="k-textbox k-space-left fields-icon" &gt;
+    &lt;input
+        kendoTextBox
+        id="icon"
+        class="input-icon"
+        &gt;
+      &lt;pan href="" class="k-icon k-i-search"&gt;&nbsp;&lt;/span&gt;
+  &lt;/span>
+    </code></pre> 
+          <h5>CSS</h5>
+          <pre><code>
+  .fields-label &#123;
+    color:#12469d;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 2px;
+  &#125;
+  .fields-icon &#123;
+    padding-top: 0px;
+    &:hover&#123;
+      border-color:$primary;
+      box-shadow: 0 0 0 0.1rem $primary;
+    &#125;
+    &:focus&#123;
+      border-color:$primary;
+      box-shadow: 0 0 0 0.1rem $primary;
+    &#125;
+  &#125;
+  .input-icon&#123;
+    padding-left: 8px;
+    height: 100%;
+    &:focus&#123;
+      border-color:$primary;
+      box-shadow: 0 0 0 0.2rem $primary;
+    &#125;
+  &#125;
+          </code></pre>
+            </div>
+            <div *ngIf="showCode[3]" class="col-12 masterControl-source ">
+                <h5 class="mt-2">Html</h5>
+    <pre><code>
+  &lt;label class="fields-label" for="Password"&gt;Password input&lt;/label&gt;
+  &lt;input
+    kendoTextBox
+    id="Password"
+    type="password"
+  &gt;
+    </code></pre> 
+          <h5>CSS</h5>
+          <pre><code>
+  .fields-label &#123;
+    color:#12469d;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 2px;
+  &#125;
+          </code></pre>
+            </div>
+           
+      
+        </div>
+      </div>
+    </div>
+
+
+</div>
+
+

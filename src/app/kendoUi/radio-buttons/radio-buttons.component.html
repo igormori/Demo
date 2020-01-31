@@ -1,0 +1,177 @@
+<div class="row buttons-row" kendoRippleContainer>
+    <div class="col-12 mt-2">
+        <h4>Iteractive buttons</h4>
+    </div>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="row">
+                    <div class="col-12  p-3">
+                        <div class="row">
+                            <div class="col-12 col-sm masterControl-btns">
+                                <div class="row text-center">
+                                        <div class="col-12"><label class="radio-label">Radio Button</label></div>
+                                    <div class="col-6 text-right p-0">
+                                        <input
+                                            kendoRadioButton
+                                            id="radio-one"
+                                            type="radio"
+                                            name="Radio button one"
+                                            value="one"
+                                            [(ngModel)]="model.radio"
+                                            (click)="onCodeClick(0)"
+                                        />
+                                    </div>
+                                    <div class="col-6 item-labels">
+                                        <label for="radio-one">Item 1</label>
+                                    </div>
+                                    <div class="col-6 text-right p-0">
+                                        <input
+                                          kendoRadioButton
+                                          id="radio-two"
+                                          type="radio"
+                                          name="Radion button two"
+                                          value="two"
+                                          [(ngModel)]="model.radio"
+                                          (click)="onCodeClick(1)"
+                                        />
+                                    </div>
+                                    <div class="col-6 item-labels">
+                                        <label for="radio-two">Item 2</label>
+                                    </div>
+                                    <div class="col-6 text-right p-0">
+                                      <input
+                                        kendoRadioButton
+                                        class="radio-error"
+                                        id="radio-error"
+                                        type="radio"
+                                        name="Radion button three"
+                                        value="three"
+                                        [(ngModel)]="model.radio"
+                                        (click)="onCodeClick(2)"
+                                      />
+                                    </div>
+                                    <div class="col-6 item-labels">
+                                      <label class="error-label" for="radio-error">Error</label>
+                                    </div>
+                                    <div class="col-6 text-right p-0" (click)="onCodeClick(3)">
+                                      <input
+                                        kendoRadioButton
+                                        id="radio-disable"
+                                        type="radio"
+                                        name="Radion button disable"
+                                        value="disable"
+                                        [(ngModel)]="model.disable"
+                                        [disabled]="true"
+                                      />
+                                    </div>
+                                    <div class="col item-labels">
+                                      <label for="radio-disable" (click)="onCodeClick(3)">Disable</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm masterControl-btns">
+                              <div class="row text-center">
+                                <div class="col-12"><label class="radio-label" for="checkbox">Checkbox</label></div>
+                                <div class="col-6 checkBox-cols">
+                                  <input
+                                    kendoCheckBox
+                                    id="checkbox-one"
+                                    type="checkbox"
+                                    [(ngModel)]="model.checkboxOne"
+                                    (click)="onCodeClick(4)"
+                                  />
+                                </div>
+                                <div class="col-6 item-labels">
+                                  <label for="checkbox-one">Item 1</label>
+                                </div>
+                                <div class="col-6 checkBox-cols">
+                                  <input
+                                    kendoCheckBox
+                                    id="checkbox-two"
+                                    type="checkbox"
+                                    [(ngModel)]="model.checkboxTwo"
+                                    (click)="onCodeClick(5)"
+                                  />
+                                </div>
+                                <div class="col-6 item-labels">
+                                  <label for="checkbox-two">Item 2</label>
+                                </div>
+                                  <div class="col-6 checkBox-cols">
+                                    <input
+                                      kendoCheckBox
+                                      class="checkbox-error"
+                                      id="checkbox-error"
+                                      type="checkbox"
+                                      [(ngModel)]="model.checkboxError"
+                                      (click)="onCodeClick(6)"
+                                    />
+                                  </div>
+                                  <div class="col-6 item-labels">
+                                    <label class="error-label" for="checkbox-error">Error</label>
+                                  </div>
+                                  <div class="col-6 checkBox-cols" (click)="onCodeClick(7)">
+                                    <input
+                                      kendoCheckBox
+                                      id="checkbox-disabled"
+                                      type="checkbox"
+                                      [(ngModel)]="model.checkboxDisabled"
+                                      [disabled]="true"
+                                    />
+                                  </div>
+                                  <div class="col-6 item-labels">
+                                    <label class="item-label" for="checkbox-disabled" (click)="onCodeClick(7)">Error</label>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm masterControl-btns">
+                              <div class="row text-center mt-2">
+                                <div class="col-12"><label class="radio-label" for="checkbox">Switch</label></div>
+                                <div class="col-12 text-center">
+                                  <kendo-switch
+                                    id="switch-one"
+                                    [(ngModel)]="model.checkedOne"
+                                    (click)='onChangeSwitchOne(8)'
+                                  ></kendo-switch>
+                                  <label class="switch-label" for="switch-one">{{switchOne}}</label>
+                                </div>
+                                <div class="col-12 text-center mt-2">
+                                  <kendo-switch
+                                    id="switch-two"
+                                    [(ngModel)]="model.checkedTwo"
+                                    (click)='onChangeSwitchTwo(9)'
+                                  ></kendo-switch>
+                                  <label class="switch-label" for="switch-two">{{switchTwo}}</label>
+                                </div>
+                                <div class="col-12 text-center mt-2" (click)="onCodeClick(10)">
+                                  <kendo-switch
+                                    class="switch-disable"
+                                    id="switch-disable"
+                                    [(ngModel)]="checked"
+                                    [disabled]="true"
+                                  ></kendo-switch>
+                                  <label class="switch-label" for="switch-disable">Off</label>
+                                </div>
+                                  <div class="col-12 text-center mt-2" (click)="onCodeClick(11)">
+                                    <kendo-switch
+                                      class="switch-disable"
+                                      id="switch-disableOn"
+                                      [(ngModel)]="switchDisabledOn"
+                                      [disabled]="true"
+                                    ></kendo-switch>
+                                    <label class="switch-label" for="switch-disableOn">On</label>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <app-source-code [showCode]="showCode"></app-source-code>
+            </div>
+        </div>
+    </div>
+
+
+</div>

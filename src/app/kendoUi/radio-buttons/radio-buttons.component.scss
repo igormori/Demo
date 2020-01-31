@@ -1,0 +1,74 @@
+$validation-color:#e41937;
+$primary:#12469d;
+.buttons-row{
+    border: 1px solid lightslategray;
+    border-radius: 4px;
+    margin:20px 10px 20px 10px;
+}
+
+.masterControl-btns{
+    margin: 5px;
+    text-align: center;
+}
+
+.radio-label{
+    display:block;
+}
+
+.item-labels {
+    padding-top: 6px;
+    padding-left: 0px;
+    text-align: start;
+}
+
+.checkBox-cols {
+    text-align: end;
+}
+
+
+.radio-error {
+    border: 2px solid $validation-color;
+    &:hover{
+        color: $validation-color;
+        border-color: $validation-color;
+        box-shadow: 0 0 0 0.3rem #e3e9f3;
+    }
+    &:focus{
+        border-color:$primary ;
+        box-shadow: 0 0 0 0.3rem #e3e9f3 !important;
+    }
+    &:checked{
+        color: $validation-color;
+        border-color: $validation-color;
+    }
+    &::before{
+        color: $validation-color;
+        border-color: $validation-color;
+    }
+}
+
+.error-label{
+    color:$validation-color;
+}
+
+.switch-label{
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+
+.checkbox-error {
+    border: 2px solid $validation-color;
+    &:checked {
+        background-color: $validation-color;
+        border: 2px solid $validation-color;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .buttons-row{
+        margin:10px 2px 10px 2px;
+        text-align: center;
+    }
+}

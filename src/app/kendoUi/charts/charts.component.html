@@ -1,0 +1,21 @@
+<div class="col-12">
+    <kendo-chart >
+        <kendo-chart-title text="Units sold" color="black"></kendo-chart-title>
+        <kendo-chart-tooltip [shared]="false" format="{0}">
+            <ng-template kendoChartSeriesTooltipTemplate let-value="value">
+                <div>Default Content</div> {{ value }}
+            </ng-template>
+        </kendo-chart-tooltip>
+        <kendo-chart-category-axis >
+            <kendo-chart-category-axis-item
+                [categories]="categories"
+                [title]="{ text: 'Days' }">
+            </kendo-chart-category-axis-item>
+        </kendo-chart-category-axis>
+        <kendo-chart-series>
+          <kendo-chart-series-item color="blue" [line]="{ style: style, width: 2 }"  opacity="0.3" aggregate="sum" type="area" [stack]="true" [data]="[123, 276, 310, 212, 240, 156, 98]">
+          </kendo-chart-series-item>
+        </kendo-chart-series>
+      </kendo-chart>
+  
+ </div>

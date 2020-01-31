@@ -1,0 +1,317 @@
+
+<div class="row buttons-row" kendoRippleContainer >
+    <div class="col-12 mt-2">
+        <h4>Buttons</h4>
+    </div>
+    <div class="col-12">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="row">
+              <div class="col-12  p-3">
+                  <h5>Primary Buttons</h5>
+                <div class="row">
+                  <div class="col-12 col-sm masterControl-btns">
+                    <button
+                      kendoButton
+                      (click)="onButtonClick(0)"
+                    >
+                    <span class="btn__label" tabindex="-1">
+                        Primary
+                    </span>
+                  </button>
+                </div>
+                <div class="col-12 col-sm masterControl-btns">
+                      <button
+                      kendoButton
+                      [icon]="'plus'"
+                      (click)="onButtonClick(1)"
+                      >
+                      <span class="btn__label" tabindex="-1">
+                          Primary
+                      </span>
+                    </button>
+                  </div>
+                  <div class="col-12 col-sm masterControl-btns" (click)="onButtonClick(2)">
+                      <button
+                      kendoButton
+                      [disabled]="true"
+                      >
+                      Primary
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 p-3">
+                  <h5>Secondary Buttons</h5>
+                  <div class="row">
+                      <div class="col-12 col-sm masterControl-btns">
+                        <button
+                          kendoButton
+                          [look]="'outline'"
+                          (click)="onButtonClick(3)"
+                        >
+                        <span class="btn__label" tabindex="-1">
+                            Secondary
+                        </span>
+                        </button>
+                      </div>
+                  <div class="col-12 col-sm masterControl-btns">
+                      <button
+                        kendoButton
+                        [look]="'outline'"
+                        [icon]="'plus'"
+                        (click)="onButtonClick(4)"
+                      >
+                      <span class="btn__label" tabindex="-1">
+                          Secondary
+                      </span>
+                    </button>
+                  </div>
+            
+                  <div class="col-12 col-sm masterControl-btns" (click)="onButtonClick(5)">
+                      <button
+                        kendoButton
+                        [look]="'outline'"
+                        [disabled]="true"
+                      >
+                      <span class="btn__label" tabindex="-1">
+                          Secondary
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 p-3">
+                  <h5>Flat Buttons</h5>
+                  <div class="row">
+                      <div class="col-12 col-sm masterControl-btns">
+                        <button
+                          kendoButton
+                          [look]="'flat'"
+                          (click)="onButtonClick(6)"
+                        >
+                        <span class="btn__label" tabindex="-1">
+                            Flat
+                        </span>
+                        </button>
+                      </div>
+                  <div class="col-12 col-sm masterControl-btns">
+                      <button
+                        kendoButton
+                        [look]="'flat'"
+                        [icon]="'plus'"
+                        (click)="onButtonClick(7)"
+                      >
+                      <span class="btn__label" tabindex="-1">
+                          Flat
+                      </span>
+                    </button>
+                  </div>
+            
+                  <div class="col-12 col-sm masterControl-btns" (click)="onButtonClick(8)">
+                      <button
+                        kendoButton
+                        [look]="'flat'"
+                        [disabled]="true"
+                      >
+                      <span class="btn__label" tabindex="-1">
+                          Flat
+                      </span>
+                    </button>
+                  </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div *ngIf="showButton[0]" class="col-12 masterControl-source ">
+                <h5 class="mt-2">Html</h5>
+    <pre><code>
+  &lt;button kendoButton&gt;
+    &lt;span class="btn__label" tabindex="-1"&gt;
+        Primary
+    &lt;/span&gt;
+  &lt;/button&gt;
+    </code></pre> 
+          <h5>CSS</h5>
+          <pre><code>
+  .k-button:focus,
+  .btn__label:focus 
+  &#123;
+      outline:none;
+  &#125;
+          </code></pre>
+            </div>
+            <div *ngIf="showButton[1]" class="col-12 masterControl-source ">
+                <h5 class="mt-2">Html</h5>
+    <pre><code>
+  &lt;button kendoButton [icon]="'plus'" &gt;
+    &lt;span class="btn__label" tabindex="-1"&gt;
+        Primary
+    &lt;/span&gt;
+  &lt;/button&gt;
+    </code></pre> 
+          <h5>CSS</h5>
+          <pre><code>
+  .k-button:focus,
+  .btn__label:focus 
+  &#123;
+      outline:none;
+  &#125;
+          </code></pre>
+            </div>
+            <div *ngIf="showButton[2]" class="col-12 masterControl-source ">
+                <h5 class="mt-2">Html</h5>
+    <pre><code>
+  &lt;button kendoButton [disabled]="true"&gt;
+    &lt;span class="btn__label" tabindex="-1"&gt;
+        Primary
+    &lt;/span&gt;
+  &lt;/button&gt;
+    </code></pre> 
+          <h5>CSS</h5>
+          <pre><code>
+  .k-button:focus,
+  .btn__label:focus 
+  &#123;
+      outline:none;
+  &#125;
+          </code></pre>
+            </div>
+            <div *ngIf="showButton[3]" class="col-12 masterControl-source ">
+                <h5 class="mt-2">Html</h5>
+    <pre><code>
+  &lt;button
+      kendoButton
+      [look]="'outline'"
+  &gt;
+    &lt;span class="btn__label" tabindex="-1"&gt;
+        Primary
+    &lt;/span&gt;
+  &lt;/button&gt;
+    </code></pre> 
+          <h5>CSS</h5>
+          <pre><code>
+  .k-button:focus,
+  .btn__label:focus 
+  &#123;
+      outline:none;
+  &#125;
+          </code></pre>
+            </div>
+            <div *ngIf="showButton[4]" class="col-12 masterControl-source ">
+                <h5 class="mt-2">Html</h5>
+    <pre><code>
+  &lt;button
+      kendoButton
+      [look]="'outline'"
+      [icon]="'plus'"
+  &gt;
+    &lt;span class="btn__label" tabindex="-1"&gt;
+        Primary
+    &lt;/span&gt;
+  &lt;/button&gt;
+    </code></pre> 
+          <h5>CSS</h5>
+          <pre><code>
+  .k-button:focus,
+  .btn__label:focus 
+  &#123;
+      outline:none;
+  &#125;
+          </code></pre>
+            </div>
+            <div *ngIf="showButton[5]" class="col-12 masterControl-source">
+                <h5 class="mt-2">Html</h5>
+    <pre><code>
+  &lt;button
+      kendoButton
+      [look]="'outline'"
+      [disabled]="true"
+  &gt;
+    &lt;span class="btn__label" tabindex="-1"&gt;
+        Primary
+    &lt;/span&gt;
+  &lt;/button&gt;
+    </code></pre> 
+          <h5>CSS</h5>
+          <pre><code>
+  .k-button:focus,
+  .btn__label:focus 
+  &#123;
+      outline:none;
+  &#125;
+          </code></pre>
+            </div>
+            <div *ngIf="showButton[6]" class="col-12 masterControl-source">
+                <h5 class="mt-2">Html</h5>
+    <pre><code>
+  &lt;button
+      kendoButton
+      [look]="'flat'"
+  &gt;
+    &lt;span class="btn__label" tabindex="-1"&gt;
+        Primary
+    &lt;/span&gt;
+  &lt;/button&gt;
+    </code></pre> 
+          <h5>CSS</h5>
+          <pre><code>
+  .k-button:focus,
+  .btn__label:focus 
+  &#123;
+      outline:none;
+  &#125;
+          </code></pre>
+            </div>
+            <div *ngIf="showButton[7]" class="col-12 masterControl-source">
+                <h5 class="mt-2">Html</h5>
+    <pre><code>
+  &lt;button
+      kendoButton
+      [look]="'flat'"
+      [icon]="'plus'"
+  &gt;
+    &lt;span class="btn__label" tabindex="-1"&gt;
+        Primary
+    &lt;/span&gt;
+  &lt;/button&gt;
+    </code></pre> 
+          <h5>CSS</h5>
+          <pre><code>
+  .k-button:focus,
+  .btn__label:focus 
+  &#123;
+      outline:none;
+  &#125;
+          </code></pre>
+            </div>
+            <div *ngIf="showButton[8]" class="col-12 masterControl-source">
+                <h5 class="mt-2">Html</h5>
+    <pre><code>
+  &lt;button
+      kendoButton
+      [look]="'flat'"
+      [disabled]="true"
+  &gt;
+    &lt;span class="btn__label" tabindex="-1"&gt;
+        Primary
+    &lt;/span&gt;
+  &lt;/button&gt;
+    </code></pre> 
+          <h5>CSS</h5>
+          <pre><code>
+  .k-button:focus,
+  .btn__label:focus 
+  &#123;
+      outline:none;
+  &#125;
+          </code></pre>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+</div>
+

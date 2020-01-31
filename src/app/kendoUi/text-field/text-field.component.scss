@@ -1,0 +1,84 @@
+$validation-color:#e41937;
+$primary:#12469d;
+.buttons-row{
+    border: 1px solid lightslategray;
+    border-radius: 4px;
+    margin:20px 10px 20px 10px;
+}
+
+.masterControl-btns{
+    margin: 5px;
+}
+
+.masterControl-source{
+    background: lightgray;
+    border:1px solid darkgray;
+    border-radius: 4px;
+    text-align: start;
+    margin:8px 2px 8px 2px;
+}
+
+.validation-error {
+    .k-textbox {
+        border: 1px solid $validation-color;
+        padding-left: 5px;
+        &:hover{
+            border-color:$validation-color ;
+        }
+        &:focus{
+            border-color:$validation-color;
+            box-shadow: 0 0 0 0.1rem $validation-color;
+        }
+    }
+}
+
+.fields-label{
+    color:#12469d;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.error-label {
+    color:$validation-color ;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.error-message {
+    color:$validation-color ;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.fields-icon {
+    &:hover{
+        border-color:$primary;
+        box-shadow: 0 0 0 0.1rem $primary;
+    }
+    &:focus{
+        border-color:$primary;
+        box-shadow: 0 0 0 0.1rem $primary;
+    }
+    padding: 0px;
+}
+
+.input-icon{
+    padding-left: 8px;
+    height: 100%;
+    &:focus{
+        border-color:$primary;
+        box-shadow: 0 0 0 0.2rem $primary;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .buttons-row{
+        margin:10px 2px 10px 2px;
+        text-align: center;
+    }
+}

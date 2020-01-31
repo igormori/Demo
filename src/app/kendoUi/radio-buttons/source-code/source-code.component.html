@@ -1,0 +1,211 @@
+<div *ngIf="showCode[0]" class="col-12 masterControl-source ">
+    <h5 class="mt-2">Html</h5>
+<pre><code>
+  &lt;input
+    kendoRadioButton
+    id="itemOne"
+    type="radio"
+    name="Radio button one"
+    value="one"
+    [(ngModel)]="model.radio"
+  /&gt;
+</code></pre>
+</div>
+<div *ngIf="showCode[1]" class="col-12 masterControl-source ">
+  <h5 class="mt-2">Html</h5>
+<pre><code>
+  &lt;input
+    kendoRadioButton
+    id="itemTwo"
+    type="radio"
+    name="Radio button two"
+    value="two"
+    [(ngModel)]="model.radio"
+  /&gt;
+</code></pre>
+</div>
+<div *ngIf="showCode[2]" class="col-12 masterControl-source ">
+    <h5 class="mt-2">Html</h5>
+<pre><code>
+  &lt;input
+    kendoRadioButton
+    class="radio-error"
+    id="itemThree"
+    type="radio"
+    name="Radio button three"
+    value="three"
+    [(ngModel)]="model.radio"
+  /&gt;
+</code></pre>
+    <h5>CSS</h5>
+<pre><code>
+  .radio-error &#123;
+    border: 2px solid $validation-color;
+    &:hover &#123;
+      color: $validation-color;
+      border-color: $validation-color;
+      box-shadow: 0 0 0 0.3rem #e3e9f3;
+    &#125;
+    &:focus &#123;
+      border-color:$primary ;
+      box-shadow: 0 0 0 0.3rem #e3e9f3 !important;
+    &#125;
+    &:checked &#123;
+      color: $validation-color;
+      border-color: $validation-color;
+    &#125;
+    &::before &#123;
+      color: $validation-color;
+      border-color: $validation-color;
+    &#125;
+  &#125;
+</code></pre>
+</div>
+<div *ngIf="showCode[3]" class="col-12 masterControl-source ">
+    <h5 class="mt-2">Html</h5>
+<pre><code>
+  &lt;input
+    kendoRadioButton
+    class="radio-error"
+    id="itemFour"
+    type="radio"
+    name="Radio button disable"
+    value="disable"
+    [(ngModel)]="model.radio"
+    [disabled]="true"
+  /&gt;
+</code></pre>
+</div>
+<!-- Switch  -->
+<div *ngIf="showCode[4]" class="col-12 masterControl-source ">
+  <h5 class="mt-2">Html</h5>
+  <pre><code>
+  &lt;input
+    kendoCheckBox
+    id="checkbox-one"
+    type="checkbox"
+    [(ngModel)]="model.checkboxOne"
+  /&gt;
+</code></pre>
+</div>
+<div *ngIf="showCode[5]" class="col-12 masterControl-source ">
+  <h5 class="mt-2">Html</h5>
+  <pre><code>
+  &lt;input
+    kendoCheckBox
+    id="checkbox-two"
+    type="checkbox"
+    [(ngModel)]="model.checkboxTwo"
+  /&gt;
+</code></pre>
+</div>
+<div *ngIf="showCode[6]" class="col-12 masterControl-source ">
+  <h5 class="mt-2">Html</h5>
+<pre><code>
+  &lt;input
+    kendoCheckBox
+    class="checkbox-error"
+    id="checkbox-error"
+    type="checkbox"
+    [(ngModel)]="model.checkboxError"
+  /&gt;
+</code></pre>
+  <h5 class="mt-2">CSS</h5>
+<pre><code>
+  .checkbox-error &#123;
+    border: 2px solid $validation-color;
+    &:checked &#123;
+      background-color: $validation-color;
+      border: 2px solid $validation-color;
+      &#125;
+  &#125;
+</code></pre>
+</div>
+<div *ngIf="showCode[7]" class="col-12 masterControl-source ">
+  <h5 class="mt-2">Html</h5>
+<pre><code>
+  &lt;input
+    kendoCheckBox
+    kendoCheckBox
+    id="checkbox-disabled"
+    type="checkbox"
+    [(ngModel)]="model.checkboxDisabled"
+    [disabled]="true"
+  /&gt;
+</code></pre>
+</div>
+<div *ngIf="showCode[8]" class="col-12 masterControl-source ">
+  <h5 class="mt-2">Html</h5>
+  <pre><code>
+  &lt;kendo-switch
+    id="switch-one"
+    [(ngModel)]="model.checkedOne"
+  &gt;&lt;/kendo-switch&gt;
+  &lt;label class="switch-label" for="switch-one"&gt;label On/Off&lt;/label&gt;
+</code></pre>
+  <h5 class="mt-2">CSS</h5>
+  <pre><code>
+  .switch-label &#123;
+    font-size: 16px;
+    margin-left: 5px;
+  &#125;
+  </code></pre>
+</div>
+
+<div *ngIf="showCode[9]" class="col-12 masterControl-source ">
+  <h5 class="mt-2">Html</h5>
+  <pre><code>
+  &lt;kendo-switch
+    id="switch-two"
+    [(ngModel)]="model.checkedTwo"
+  &gt;&lt;/kendo-switch&gt;
+  &lt;label class="switch-label" for="switch-two"&gt;label On/Off&lt;/label&gt;
+</code></pre>
+<h5 class="mt-2">CSS</h5>
+<pre><code>
+  .switch-label &#123;
+    font-size: 16px;
+    margin-left: 5px;
+  &#125;
+  </code></pre>
+</div>
+
+<div *ngIf="showCode[10]" class="col-12 masterControl-source ">
+  <h5 class="mt-2">Html</h5>
+  <pre><code>
+  &lt;kendo-switch
+    class="switch-disable"
+    id="switch-disableOff"
+    [(ngModel)]="switchDisabledOff"
+    [disabled]="true"
+  &gt;&lt;/kendo-switch&gt;
+  &lt;label class="switch-label" for="disableOff"&gt;label On/Off&lt;/label&gt;
+</code></pre>
+  <h5 class="mt-2">CSS</h5>
+  <pre><code>
+  .switch-label &#123;
+    font-size: 16px;
+    margin-left: 5px;
+  &#125;
+  </code></pre>
+</div>
+
+<div *ngIf="showCode[11]" class="col-12 masterControl-source ">
+  <h5 class="mt-2">Html</h5>
+  <pre><code>
+  &lt;kendo-switch
+    class="switch-disable"
+    id="switch-disableOn"
+    [(ngModel)]="switchDisabledOn"
+    [disabled]="true"
+  &gt;&lt;/kendo-switch&gt;
+  &lt;label class="switch-label" for="disableOn"&gt;label On/Off&lt;/label&gt;
+</code></pre>
+  <h5 class="mt-2">CSS</h5>
+  <pre><code>
+  .switch-label &#123;
+    font-size: 16px;
+    margin-left: 5px;
+  &#125;
+  </code></pre>
+</div>
